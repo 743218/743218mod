@@ -9,4 +9,6 @@ public:
 
 	static void initialize();
 	static void shutDown();
+
+	static void onDirextXScreenOverlay();
 };
