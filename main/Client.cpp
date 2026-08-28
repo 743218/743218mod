@@ -9,5 +9,6 @@ void Client::clientMessage(std::string s) {
 }
 
 void Client::initialize() {
+  if (initialized) return;
   intiialized = true;
 }
