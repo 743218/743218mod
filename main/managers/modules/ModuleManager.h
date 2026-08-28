@@ -12,4 +12,5 @@ public:
 
 	static void onDirextXScreenOverlay();
 	static void onClientTick();
+	static void onBaseTick();
 };
