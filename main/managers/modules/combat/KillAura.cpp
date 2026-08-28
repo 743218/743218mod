@@ -1,5 +1,7 @@
 #include "KillAura.h"
 
+// Created by 743218 on Aug 28 2026
+
 KillAura::KillAura() : Module("KillAura", ModuleCategory::Combat, "Attack entities automatically.", 0x0) {
 };
 
