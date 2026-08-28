@@ -7,5 +7,5 @@ private:
 public:
   Watermark();
 
-  void onRender2DScreen() override;
+  void onDirextXScreenOverlay() override;
 };
