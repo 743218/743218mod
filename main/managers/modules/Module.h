@@ -1,5 +1,7 @@
 #pragma once
 #include "../../sdk/GameData.h"
+#include "../../util/Color.h"
+
 #include "ModuleCategory.h"
 
 class Module {
