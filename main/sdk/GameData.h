@@ -22,6 +22,9 @@ public:
   static inline Level* getLevel() {
     return level;
   }
+
+  std::vector getActorList() {
+  }
 };
 
 extern GameData gameData;
