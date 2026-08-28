@@ -1,5 +1,6 @@
 #pragma once
 #include "../../sdk/GameData.h"
+#include "ModuleCategory.h"
 
 class Module {
 private:
