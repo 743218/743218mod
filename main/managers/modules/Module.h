@@ -10,7 +10,7 @@ private:
 	std::string moduleDescription;
 	int key;
 	bool enabled;
-
+	ModuleCategory category;
 public:
 	Module(std::string moduleName, ModuleCategory category, std::string description, int key = 0x0);
 	~Module();
