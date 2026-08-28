@@ -34,6 +34,10 @@ public:
     clientReleaseVersion = s;
   }
 
+  static inline bool isInitialized() {
+    return initialized;
+  }
+
   void initialize();
   void clientMessage(std::string);
 };
