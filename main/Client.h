@@ -41,3 +41,5 @@ public:
   void initialize();
   void clientMessage(std::string);
 };
+
+extern Client client;
