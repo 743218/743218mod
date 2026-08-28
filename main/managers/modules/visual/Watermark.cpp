@@ -4,7 +4,7 @@ Watermark::Watermark() : Module("Watermark", ModuleCategory::Visual, "Display te
   addSetting(new ColorSetting("Color", "The color you wish the watermark text to be.", &color, color, false, true));
 };
 
-void Watermark::onRender2DScreen() {
+void Watermark::onDirextXScreenOverlay() {
   if (!renderer.isD2DOverlayReady()) return;
 
   float textSize = 1.0f;
