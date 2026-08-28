@@ -10,3 +10,21 @@ void ModuleManager::shutDown() {
   moduleList.clear();
   initialized = false;
 }
+
+void ModuleManager::onDirextXScreenOverlay() {
+  if (!Client::isInitialized()) return;
+
+  for (auto mod : moduleList) {
+    if (!mod->isEnabled()) continue;
+    mod->onDirectXScreenOverlay();
+  }
+}
+
+void ModuleManager::onClientTick() {
+  if (!Client::isInitialized()) return;
+
+  for (auto mod : moduleList) {
+    if (!mod->isEnabled()) continue;
+    mod->onClientTick();
+  }
+}
