@@ -11,4 +11,5 @@ public:
 	static void shutDown();
 
 	static void onDirextXScreenOverlay();
+	static void onClientTick();
 };
