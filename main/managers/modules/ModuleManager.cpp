@@ -28,3 +28,12 @@ void ModuleManager::onClientTick() {
     mod->onClientTick();
   }
 }
+
+void ModuleManager::onBaseTick() {
+  if (!Client::isInitialized()) return;
+
+  for (auto mod : moduleList) {
+    if (!mod->isEnabled()) continue;
+    mod->onBaseTick();
+  }
+}
