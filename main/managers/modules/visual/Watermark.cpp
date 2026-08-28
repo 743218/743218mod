@@ -5,7 +5,7 @@ Watermark::Watermark() : Module("Watermark", Category::Visual, "Display text in 
 };
 
 void Watermark::onRender2DScreen() {
-  if (!Renderer::isD2DOverlayReady()) return;
+  if (!renderer.isD2DOverlayReady()) return;
 
   float textSize = 1.0f;
   
@@ -13,8 +13,8 @@ void Watermark::onRender2DScreen() {
   std::string clientVersion = client.getClientVersion();
   std::string clientBuild = client.getClientReleaseVersion();
   
-  auto renderer = Renderer::getD2DRenderer();
-  renderer->addText(Vector2(1.0f, 1.0f), clientName, color, textSize);
-  float width = renderer->getTextWidth(clientName, textSize);
-  renderer->addText(Vector2(1.0f + width, 1.0f), clientVersion + clientBuild, Color::light_gray, textSize);
+  auto d2d = renderer.getD2DRenderer();
+  d2d->addText(Vector2(1.0f, 1.0f), clientName, color, textSize);
+  float width = d2d->getTextWidth(clientName, textSize);
+  d2d->addText(Vector2(1.0f + width, 1.0f), clientVersion + clientBuild, Color::light_gray, textSize);
 }
