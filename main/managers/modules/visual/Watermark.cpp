@@ -1,6 +1,6 @@
 #include "Watermark.h"
 
-Watermark::Watermark() : Module("Watermark", Category::Visual, "Display text in the top left corner of the screen.", 0x0) {
+Watermark::Watermark() : Module("Watermark", ModuleCategory::Visual, "Display text in the top left corner of the screen.", 0x0) {
   addSetting(new ColorSetting("Color", "The color you wish the watermark text to be.", &color, color, false, true));
 };
 
