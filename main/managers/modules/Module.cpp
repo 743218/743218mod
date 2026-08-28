@@ -6,3 +6,7 @@ Module::Module(std::string moduleName, ModuleCategory category, std::string desc
   this->category = category;
   this->key = key;
 }
+
+void Module::onDirextXScreenOverlay() {}
+void Module::onClientTick() {}
+void Module::onBaseTick() {}
