@@ -1,33 +1,39 @@
 #pragma once
 #include <string>
 
+// Created by 742318 on Aug 28, 2026
+
 class Client {
 private:
   std::string clientName = "743218mod";
   std::string clientVersion = "0.0.1";
   std::string clientReleaseVersion = "pr";
+  bool initialized = false;
 public:
   std::string getClientName() {
     return clientName;
   }
 
-  void setClientName(std::string s) {
+  static inline void setClientName(std::string s) {
     clientName = s;
   }
 
-  std::string getClientVersion() {
+  static inline std::string getClientVersion() {
     return clientVersion;
   }
 
-  void setClientVersion(std::string s) {
+  static inline void setClientVersion(std::string s) {
     clientVersion = s;
   }
 
-  std::string getClientReleaseVersion() {
+  static inline std::string getClientReleaseVersion() {
     return clientReleaseVersion;
   }
 
-  void setClientReleaseVersion(std::string s) {
+  static inline void setClientReleaseVersion(std::string s) {
     clientReleaseVersion = s;
   }
+
+  void initialize();
+  void clientMessage(std::string);
 };
