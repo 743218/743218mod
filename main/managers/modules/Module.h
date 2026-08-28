@@ -17,6 +17,7 @@ public:
 
 	virtual void onDirextXScreenOverlay();
 	virtual void onClientTick();
+	virtual void onBaseTick();
 
 	static inline bool isEnabled() {
 		return enabled;
