@@ -16,5 +16,5 @@ void Watermark::onDirextXScreenOverlay() {
   auto d2d = renderer.getD2DRenderer();
   d2d->addText(Vector2(1.0f, 1.0f), clientName, color, textSize);
   float width = d2d->getTextWidth(clientName, textSize);
-  d2d->addText(Vector2(1.0f + width, 1.0f), clientVersion + clientBuild, Color::light_gray, textSize);
+  d2d->addText(Vector2(1.0f + width, 1.0f), clientVersion + clientBuild, Color(200.0f, 200.0f, 200.0f, 255.0f), textSize);
 }
